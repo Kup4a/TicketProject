@@ -1,7 +1,7 @@
 ﻿
 namespace TicketProject
 {
-    partial class Form1
+    partial class Authorization
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -29,13 +29,34 @@ namespace TicketProject
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.usersTableAdapter1 = new TicketProject.TicketProgDataSetTableAdapters.UsersTableAdapter();
+            this.loggingTableAdapter1 = new TicketProject.TicketProgDataSetTableAdapters.LoggingTableAdapter();
+            this.SuspendLayout();
+            // 
+            // usersTableAdapter1
+            // 
+            this.usersTableAdapter1.ClearBeforeFill = true;
+            // 
+            // loggingTableAdapter1
+            // 
+            this.loggingTableAdapter1.ClearBeforeFill = true;
+            // 
+            // Authorization
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "Authorization";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Authorization_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private TicketProgDataSetTableAdapters.UsersTableAdapter usersTableAdapter1;
+        private TicketProgDataSetTableAdapters.LoggingTableAdapter loggingTableAdapter1;
     }
 }
 
